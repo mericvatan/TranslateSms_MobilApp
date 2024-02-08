@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">TranslateSmsApp</string>
+    <string name="app_name">Translate_Sms_App</string>
+    <string name="title_name">Translate Sms</string>
     <string name="get_started">Lets Talk English!</string>
-    <string name="talk_with_your_friends">Arkadaşlarınızla İngilizce Mesajlaşın! </string>
-    <string name="secure_message">Koşullar ve Gizlilik İlkesi</string>
+    <string name="talk_with_your_friends">Arkadaşlarınızla İngilizce Mesajlaşın! </string><string name="secure_message">Koşullar ve Gizlilik İlkesi</string>
     <string name="online">Çevrimiçi</string>
-    <string name="type_message">Mesaj</string>
-    <string name="welcome_back">"Tekrar hoşgeldin, "</string>
+    <string name="message">Mesaj</string>
+    <string name="welcome">"Tekrar hoşgeldin, "</string>
     <string name="user">Meriç!</string>
 </resources>

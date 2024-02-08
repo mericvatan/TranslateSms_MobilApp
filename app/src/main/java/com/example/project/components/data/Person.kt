@@ -37,13 +37,13 @@ val personList = listOf(
         listOf(
             Chat(
                 1,
-                "Merhaba!",
+                "Merhaba, müsait misin",
                 "17:30",
                 true
             ),
             Chat(
                 2,
-                "Müsait misin?",
+                "Sana bir şey soracaktım",
                 "17:31",
                 true
             ),
@@ -53,9 +53,21 @@ val personList = listOf(
                 "17:35",
                 false
             ),
+            Chat(
+                4,
+                "Dün konuştuğumuz konu aklıma takıldı, tekrar konuşalım mı?",
+                "17:37",
+                true
+            ),
+            Chat(
+                5,
+                "Benim de öyle, konuşalım",
+                "17:38",
+                false
+            ),
         ),
-        "Evet müsaitim",
-        "17:17"
+        "Benim de öyle, konuşalım",
+        "17:38"
     ),
     Person(
         2,
@@ -64,24 +76,30 @@ val personList = listOf(
         listOf(
             Chat(
                 1,
-                "Selam!",
+                "Selam",
                 "16:30",
                 true
             ),
             Chat(
                 2,
-                "Dışarı çıkalım mı?",
+                "Ne düşünüyorum biliyor musun",
+                "16:32",
+                true
+            ),
+            Chat(
+                2,
+                "Alışveriş yapmaya gitmemiz lazım",
                 "16:32",
                 true
             ),
             Chat(
                 3,
-                "Harika olur, hadi gidelim",
+                "Aklımı okuyorsun ",
                 "16:35",
                 false
             ),
         ),
-        "Harika olur",
+        "Aklımı okuyorsun",
         "16:35"
     ),
     Person(
@@ -97,19 +115,25 @@ val personList = listOf(
             ),
             Chat(
                 2,
-                "Film izlemeye gidelim mi?",
+                "Yeni çıkan şu filmi bu akşam izlemeye gitsek diyorum",
                 "14:16",
                 true
             ),
             Chat(
                 3,
-                "Olabilir, aklında hangi film var?",
+                "Çok eğleniriz, ne dersin?",
                 "14:17",
+                true
+            ),
+            Chat(
+                4,
+                "Harika olur gerçekten",
+                "14:20",
                 false
             ),
         ),
-        "Olabilir, aklında hangi film var?",
-        "14:17"
+        "Harika olur gerçekten",
+        "14:20"
     ),
     Person(
         4,
@@ -118,24 +142,25 @@ val personList = listOf(
         listOf(
             Chat(
                 1,
-                "Günaydın",
+                "Günaydın, hava çok güzel",
                 "11:33",
                 true
             ),
             Chat(
                 2,
-                "Bugün derse gidiyor muyuz?",
+                "Bugün derse gidiyor musun? Biraz geride kaldık",
                 "11:34",
                 true
             ),
+
             Chat(
                 3,
-                "Evet, şimdi çıkıyorum",
+                "Evet, gidiyorum sen?",
                 "11:35",
                 false
             ),
         ),
-        "Evet, şimdi çıkıyorum",
+        "Evet, gidiyorum sen?",
         "11:35"
     ),
     Person(
@@ -145,25 +170,25 @@ val personList = listOf(
         listOf(
             Chat(
                 1,
-                "Sınav notları açıklanmış",
+                "Sana neler olduğunu anlattığımda inanmayacaksın",
                 "11:30",
                 true
             ),
             Chat(
                 2,
-                "Gördün mü?",
+                "Çok şey kaçırdın, hemen buluşmalıyız",
                 "11:31",
                 true
             ),
             Chat(
                 3,
-                "Hayır, hemen bakıyorum",
+                "Hemen anlatmalısın bana",
                 "11:32",
                 false
             ),
 
         ),
-        "Hayır, hemen bakıyorum",
+        "Hemen anlatmalısın",
         "11:32"
     )
 )

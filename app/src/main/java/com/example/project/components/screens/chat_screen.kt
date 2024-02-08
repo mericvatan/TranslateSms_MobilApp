@@ -35,7 +35,7 @@ import androidx.navigation.NavHostController
 import com.example.project.R
 import com.example.project.components.IconComponentDrawable
 import com.example.project.components.IconComponentImageVector
-import com.example.project.components.SpacerWidth
+import com.example.project.components.SpaceWidth
 import com.example.project.components.data.Person
 import com.example.project.components.data.Chat
 import com.example.project.ui.theme.Gray
@@ -61,14 +61,14 @@ fun ChatScreen(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.Black)
+            .background(Color(0xFFFFB851))
     ) {
         Column(
             modifier = Modifier.fillMaxSize()
         ) {
             UserNameRow(
                 person = person,
-                modifier = Modifier.padding(top = 60.dp, start = 20.dp, end = 20.dp, bottom = 20.dp)
+                modifier = Modifier.padding(top = 30.dp, start = 10.dp, end = 10.dp, bottom = 10.dp)
             )
             Box(
                 modifier = Modifier
@@ -218,7 +218,7 @@ fun CustomTextField(
         value = text, onValueChange = { onValueChange(it) },
         placeholder = {
             Text(
-                text = stringResource(R.string.type_message),
+                text = stringResource(R.string.message),
                 style = TextStyle(
                     fontSize = 14.sp,
                     color = Color.Black
@@ -277,7 +277,7 @@ fun UserNameRow(
         Row {
 
             IconComponentDrawable(icon = person.icon, size = 42.dp)
-            SpacerWidth()
+            SpaceWidth()
             Column {
                 Text(
                     text = person.name, style = TextStyle(

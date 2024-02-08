@@ -25,8 +25,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.example.project.components.IconComponentDrawable
-import com.example.project.components.SpacerHeight
-import com.example.project.components.SpacerWidth
+import com.example.project.components.SpaceHeight
+import com.example.project.components.SpaceWidth
 import com.example.project.components.data.Person
 import com.example.project.components.data.personList
 import com.example.project.components.navigation.CHAT_SCREEN
@@ -45,7 +45,7 @@ fun HomeScreen(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.Black)
+            .background(Color(0xFFFFB851))
     ) {
 
         Column(
@@ -90,7 +90,7 @@ fun HeaderView() {
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(start = 20.dp, top = 20.dp)
+            .padding(start = 10.dp, top = 10.dp)
     ) {
         Header()
 
@@ -138,14 +138,14 @@ fun UserEachRow(
             ) {
                 Row {
                     IconComponentDrawable(icon = person.icon, size = 60.dp)
-                    SpacerWidth()
+                    SpaceWidth()
                     Column {
                         Text(
                             text = person.name, style = TextStyle(
                                 color = Color.Black, fontSize = 15.sp, fontWeight = FontWeight.Bold
                             )
                         )
-                        SpacerHeight(5.dp)
+                        SpaceHeight(5.dp)
                         Text(
                             text = person.status, style = TextStyle(
                                 color = Gray, fontSize = 14.sp
@@ -160,7 +160,7 @@ fun UserEachRow(
                     )
                 )
             }
-            SpacerHeight(15.dp)
+            SpaceHeight(15.dp)
             Divider(modifier = Modifier.fillMaxWidth(), thickness = 1.dp, color = Line)
         }
     }
@@ -179,7 +179,7 @@ fun Header() {
                 fontWeight = FontWeight.W300
             )
         ) {
-            append(stringResource(R.string.welcome_back))
+            append(stringResource(R.string.welcome))
         }
         withStyle(
             style = SpanStyle(
