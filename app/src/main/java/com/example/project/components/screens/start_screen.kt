@@ -55,7 +55,7 @@ fun StartScreen(
                         fontWeight = FontWeight.Bold
                     )
                 )
-                CustomCheckBox()
+                InformationBox()
             }
         }
         ButtonComponent(
@@ -71,7 +71,7 @@ fun StartScreen(
 
 
 @Composable
-fun CustomCheckBox() {
+fun InformationBox() {
 
     Row(
         modifier = Modifier.padding(vertical = 15.dp)

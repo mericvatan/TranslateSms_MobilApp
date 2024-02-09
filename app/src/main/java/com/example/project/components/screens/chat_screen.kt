@@ -66,7 +66,7 @@ fun ChatScreen(
         Column(
             modifier = Modifier.fillMaxSize()
         ) {
-            UserNameRow(
+            UserRow(
                 person = person,
                 modifier = Modifier.padding(top = 30.dp, start = 10.dp, end = 10.dp, bottom = 10.dp)
             )
@@ -155,13 +155,14 @@ fun ChatRowWithButton(
             )
         }
 
+        //Gelen mesaja çeviri butonu gösterilir
         if (chat.direction) {
             Box(
                 modifier = Modifier
                     .padding(8.dp)
                     .align(if (chat.direction) Alignment.Start else Alignment.End)
                     .clickable {
-                        // İkona tıklandığında burada çeviriyi tetikleyin
+                        // İkona tıklandığında burada çeviri tetiklenir
                         translateAndShowMessage(chat.message) { translatedText ->
                             translatedMessage = translatedText
                         }
@@ -199,7 +200,7 @@ fun ChatRowWithButton(
             Text(
                 text = "Çeviri: $message",
                 modifier = Modifier
-                    .padding(8.dp)
+                    .padding(vertical=4.dp, horizontal=4.dp)
                     .align(if (chat.direction) Alignment.Start else Alignment.End)
             )
         }
@@ -265,7 +266,7 @@ fun ClickableIcon(
 
 
 @Composable
-fun UserNameRow(
+fun UserRow(
     modifier: Modifier = Modifier,
     person: Person
 ) {
@@ -303,16 +304,19 @@ private fun translateAndShowMessage(sourceText: String, onTranslationComplete: (
     val sourceLanguageCode = "tr"
     val targetLanguageCode = "en"
 
+    //Kaynak ve hedef dil kodları eklenir
     val translatorOption = TranslatorOptions.Builder()
         .setSourceLanguage(sourceLanguageCode)
         .setTargetLanguage(targetLanguageCode)
         .build()
     val translator = Translation.getClient(translatorOption)
 
+    //Model indirme koşulları
     val downloadConditions = DownloadConditions.Builder()
         .requireWifi()
         .build()
 
+    //Model indirme
     translator.downloadModelIfNeeded(downloadConditions)
         .addOnSuccessListener {
 
